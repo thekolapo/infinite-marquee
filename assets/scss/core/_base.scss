@@ -1,0 +1,38 @@
+html {
+  font-family: 'Ogg', -apple-system, 'system-ui', 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+  background: #1d1d1f;
+}
+
+input,
+button {
+  outline: none;
+}
+
+button {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}

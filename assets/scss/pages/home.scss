@@ -1,0 +1,148 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  // color: #fff0e3;
+  color: #ffeddd;
+
+  &__title {
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 2.2rem;
+    margin-top: 6rem;
+  }
+
+  &__cities {
+    position: relative;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    background-position: center;
+    color: white;
+    padding: 6% 0 30%;
+    margin-top: 3.2rem;
+    overflow: hidden;
+
+    @include screen('small') {
+      padding: 90px 0 150px;
+    }
+
+    &-row {
+      --translate-value: 0;
+      --anim-play-state: paused;
+      width: 100%;
+      margin-bottom: 15vw;
+      font-size: 6vw;
+      will-change: transform;
+      animation-play-state: var(--anim-play-state);
+
+      &.animation {
+        animation: move 16s linear infinite;
+
+        @keyframes move {
+          to {
+            transform: translateX(calc(var(--translate-value) * -1%));
+          }
+        }
+      }
+
+      &:nth-of-type(1) {
+        animation-direction: reverse;
+      }
+
+      &:hover {
+        animation-play-state: paused;
+      }
+
+      @include screen('small') {
+        font-size: 4.2rem;
+        margin-bottom: 120px;
+      }
+
+      p {
+        position: absolute;
+        white-space: nowrap;
+
+        &:nth-child(2) {
+          transform: translateX(100%);
+        }
+
+        span {
+          position: relative;
+          margin-right: 6vw;
+          color: #79797f;
+          --after-color: white;
+          $colors: '#ffa3a3', '#ffeddd', '#a3fff9', '#ffa3c5';
+
+          @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+              --after-color: #{nth($colors, $i)};
+            }
+          }
+
+          &::after {
+            position: absolute;
+            content: attr(data-text);
+            top: 0;
+            left: 0;
+            color: var(--after-color);
+            width: 0%;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+          }
+
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &-image {
+      $size: 18vw;
+      --x-position: 0;
+      --y-position: 50%;
+      position: absolute;
+      width: $size;
+      height: $size;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      z-index: 6;
+      border-radius: 20px;
+      overflow: hidden;
+      transform: rotate(5deg);
+      transform: translate3d(var(--x-position), var(--y-position), 0)
+        rotate(3deg);
+      transition: transform 0.8s $easeOutExpo;
+
+      img {
+        --opacity: 0;
+        position: absolute;
+        border-radius: inherit;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: whitesmoke;
+        opacity: var(--opacity);
+        transition: opacity 0.6s $easeOutExpo;
+      }
+    }
+  }
+
+  footer {
+    font-family: 'Inter';
+    font-weight: 300;
+    bottom: 0;
+    margin-top: auto;
+    text-align: center;
+    margin-bottom: 4.2rem;
+    font-size: 1.8rem;
+
+    a {
+      color: #fac99e;
+    }
+  }
+}

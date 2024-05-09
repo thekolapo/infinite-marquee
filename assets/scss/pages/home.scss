@@ -24,6 +24,7 @@
 
     @include screen('small') {
       padding: 90px 0 150px;
+      margin-top: 2rem;
     }
 
     &-row {
@@ -140,6 +141,10 @@
     text-align: center;
     margin-bottom: 4.2rem;
     font-size: 1.8rem;
+
+    @include screen('small') {
+      margin-bottom: 9rem;
+    }
 
     a {
       color: #fac99e;

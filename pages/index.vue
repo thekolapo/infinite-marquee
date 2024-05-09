@@ -56,7 +56,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.initCitiesAnimation()
-    }, 10)
+    }, 100)
   },
   methods: {
     initCitiesAnimation() {

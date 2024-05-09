@@ -8,7 +8,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Infinite Marquee by Kolapo',
+    title: 'Infinite Marquee Demo by Kolapo',
     htmlAttrs: {
       lang: 'en',
     },
@@ -33,7 +33,7 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'Infinite Marquee by Kolapo',
+        content: 'Infinite Marquee Demo by Kolapo',
       },
       {
         hid: 'og:image',
@@ -50,7 +50,7 @@ export default {
       {
         hid: 'twitter:title',
         property: 'twitter:title',
-        content: 'Infinite Marquee',
+        content: 'Infinite Marquee Demo',
       },
       {
         hid: 'twitter:description',

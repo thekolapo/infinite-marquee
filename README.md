@@ -1,4 +1,4 @@
-# word-guess
+# infinite-marquee
 
 ## Build Setup
 

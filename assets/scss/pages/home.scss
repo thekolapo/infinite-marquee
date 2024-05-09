@@ -139,11 +139,11 @@
     bottom: 0;
     margin-top: auto;
     text-align: center;
-    margin-bottom: 4.2rem;
+    transform: translateY(-4.2rem);
     font-size: 1.8rem;
 
     @include screen('small') {
-      margin-bottom: 9rem;
+      transform: translateY(-9rem);
     }
 
     a {
